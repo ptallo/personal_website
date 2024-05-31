@@ -50,9 +50,9 @@ on:
 
 env:
   PROJECT_ID: "dev-webdev-tallopt" # TODO: update Google Cloud project id
-  GAR_LOCATION: "global" # TODO: update Artifact Registry location
+  GAR_LOCATION: "us-central1" # TODO: update Artifact Registry location
   SERVICE: "personal_website" # TODO: update Cloud Run service name
-  REGION: "global" # TODO: update Cloud Run service region
+  REGION: "us-central1" # TODO: update Cloud Run service region
 
 jobs:
   deploy:
