@@ -1,13 +1,15 @@
 FROM node:18-alpine
-RUN apk add --no-cache g++ make py3-pip libc6-compat
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY package.json .
+
 RUN npm install
 
 COPY . .
 
-EXPOSE 5173
+RUN npm run build
 
-CMD npm run dev
+EXPOSE 8080
+
+CMD [ "npm", "run", "preview" ]
