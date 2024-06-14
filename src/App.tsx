@@ -6,7 +6,6 @@ function App() {
   return (
     <div>
       <HeroImage/>
-      Hello World! This is a test!
     </div>
   )
 }
