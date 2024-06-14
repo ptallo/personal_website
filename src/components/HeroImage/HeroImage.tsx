@@ -1,11 +1,20 @@
-import React from 'react';
+import './HeroImage.scss';
 
-import './HeroImage.css';
+export function HeroImage() {
+  return <div className='hero-image'>
 
-export interface HeroImageProps {
-  prop?: string;
-}
+    <div className='intro'>
+      <h1>Hey, I'm Philip Tallo, A fullstack web developer, data scientist, and life long learner.</h1>
 
-export function HeroImage({prop = 'default value'}: HeroImageProps) {
-  return <div className='HeroImage'>HeroImage {prop}</div>;
+      <ul>
+        <li>Web Developer</li>
+        <li>Data Scientist</li>
+        <li>Life Long Learner</li>
+      </ul>
+    </div>
+
+    <div className='image-container'>
+      <img src="me.png"/>
+    </div>
+  </div>;
 }

@@ -1,11 +1,11 @@
-import './App.css'
-import { HeroImage } from './components/HeroImage'
+import './App.scss'
+import { HeroImage } from './components/HeroImage/HeroImage'
 
 function App() {
 
   return (
     <div>
-      <HeroImage prop="default"/>
+      <HeroImage/>
       Hello World! This is a test!
     </div>
   )
