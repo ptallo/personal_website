@@ -1,15 +1,27 @@
+import { HoverButton } from '../HoverButton/HoverButton';
 import './Navbar.scss';
 
+let buttonOptions = {
+  height: 60,
+  width: 320,
+  ids: [
+    "Home",
+    "Web Development",
+    "Data Science",
+    "Testamonials",
+  ],
+}
 
 export function Navbar() {
   return <div className='navbar'>
     <span>PT.</span>
 
-    <ul>
-      <li>Home</li>
-      <li>Web Development</li>
-      <li>Data Science</li>
-      <li>Testamonials</li>
-    </ul>
+    <div className='flex-container'>
+      {buttonOptions.ids.map(t => <HoverButton 
+        text={t} 
+        height={buttonOptions.height} 
+        width={buttonOptions.width}
+      />)}
+    </div>
   </div>;
 }

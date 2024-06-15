@@ -1,0 +1,38 @@
+@import "../../index.scss";
+
+.HoverButton {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+        margin: 0 auto;
+    width: 320px; 
+
+    .text {
+        // color: $text-color;
+        color: pink;
+        top: -48px;
+        font-size: 22px;
+        line-height: 32px;
+        letter-spacing: 8px;
+        position: relative;
+        pointer-events: none;
+    }
+
+    .shape {
+        fill: transparent;
+        stroke: #19f6e8;
+        border-bottom: 5px solid black;
+
+        transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+        stroke-width: 8px;
+        stroke-dashoffset: -474;
+        stroke-dasharray: 140 540;
+    }
+
+    .shape:hover {
+        stroke-width: 2px;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 760;
+    }
+
+}
