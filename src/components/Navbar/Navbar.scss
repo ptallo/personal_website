@@ -4,8 +4,9 @@
     color: $text-color;
     background-color: $background-color;
     
-    padding: 20px;
+    padding: 1em;
     display: flex;
+    align-items: flex-end;
 
     .initials {
         padding: 0;
