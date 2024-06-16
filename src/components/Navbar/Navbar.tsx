@@ -14,7 +14,7 @@ let buttonOptions = {
 
 export function Navbar() {
   return <div className='navbar'>
-    <span>PT.</span>
+    <span className='initials'>PT.</span>
 
     <div className='flex-container'>
       {buttonOptions.ids.map(t => <HoverButton 
