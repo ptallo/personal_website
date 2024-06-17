@@ -13,7 +13,7 @@ export function Navbar() {
       <a href=''>Home</a>
       <a href=''>Web Development</a>
       <a href=''>Data Science</a>
-      <a href=''>Testamonials</a>
+      <a href=''>Testimonials</a>
       |
       <a href={linkedInLink}><FontAwesomeIcon icon={faLinkedin} size='xl'/></a>
       <a href={githubLink}><FontAwesomeIcon icon={faGithub} size='xl'/></a>
