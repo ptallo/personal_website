@@ -2,27 +2,29 @@
 
 .hero-image {
     width: 100%;
-    height: 70vh;
     background-color: $background-color;
     position: relative;
 
-}
-
-.content-container {
-    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 
-    padding: 4% 0 8% 0
+    padding: 50px 0 100px 0
 }
 
 .intro {
-    padding: 5% 5% 5% 20%;
+    padding: 100px 50px 50px 50px;
+    margin: 0 0 0 auto;
     color: $text-color;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     h1 {
+        text-align: justify;
         text-transform: uppercase;
+        width: 500px;
     }
 
     span {
@@ -36,40 +38,25 @@
         list-style-type: none;
 
         padding: 2em 0 2em 0;
+
+        li {
+            margin: 0 1em 0 1em;
+            padding: 10px;
+        }
+
+        li::marker {
+            content: '*';
+            color: $accent-color;
+        }
     }
 
-    li {
-        padding: 0 1em 0 1em;
-    }
 }
 
 .image-container {
-    padding-right: 20%;
+    margin: 0 auto 0 0;
 
     img {
-        height: 500px;
         border-radius: 50%;
         background-color: $accent-color;
-    }
-}
-
-.triangle-div {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-
-
-    svg {
-        position: relative;
-        display: block;
-        width: calc(100% + 1.3px);
-        height: 259px;
-    }
-
-    .shape-fill {
-        fill: $background-color-2;
     }
 }

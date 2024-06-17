@@ -8,6 +8,6 @@ export function HoverButton({
   text = 'Something',
 }: HoverButtonProps) {
   return <button className="hover-button">
-    <span>{text}</span>
+    {text}
   </button>
 }
