@@ -15,8 +15,8 @@ export function Navbar() {
       <a href=''>Data Science</a>
       <a href=''>Testimonials</a>
       |
-      <a href={linkedInLink}><FontAwesomeIcon icon={faLinkedin} size='xl'/></a>
-      <a href={githubLink}><FontAwesomeIcon icon={faGithub} size='xl'/></a>
+      <a href={linkedInLink} target='_blank'><FontAwesomeIcon icon={faLinkedin} size='xl'/></a>
+      <a href={githubLink} target='_blank'><FontAwesomeIcon icon={faGithub} size='xl'/></a>
     </div>
   </div>;
 }
