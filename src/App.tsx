@@ -2,7 +2,7 @@ import './App.scss'
 import { HeroImage } from './components/HeroImage/HeroImage'
 import { KeywordBar } from './components/KeywordBar/KeywordBar'
 import { Navbar } from './components/Navbar/Navbar'
-import { WebDevelopmentSection } from './components/WebDevelopmentSection/WebDevelopmentSection'
+import { SkillsSection } from './components/SkillsSection/SkillsSection'
 
 function App() {
 
@@ -11,7 +11,7 @@ function App() {
       <Navbar/>
       <HeroImage/>
       <KeywordBar/>
-      <WebDevelopmentSection/>
+      <SkillsSection/>
     </div>
   )
 }
