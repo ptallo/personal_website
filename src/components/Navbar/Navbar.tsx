@@ -11,9 +11,9 @@ export function Navbar() {
 
     <div className='flex-container'>
       <a href=''>Home</a>
-      <a href=''>Web Development</a>
-      <a href=''>Data Science</a>
-      <a href=''>Testimonials</a>
+      <a href=''>Skills</a>
+      <a href=''>Employment</a>
+      <a href=''>Contact Me</a>
       |
       <a href={linkedInLink} target='_blank'><FontAwesomeIcon icon={faLinkedin} size='xl'/></a>
       <a href={githubLink} target='_blank'><FontAwesomeIcon icon={faGithub} size='xl'/></a>
