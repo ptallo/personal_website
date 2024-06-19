@@ -6,8 +6,14 @@ import { faLanguage, faRobot, faDatabase, faFlaskVial } from '@fortawesome/free-
 
 export function SkillsSection() {
   return <div className='skills'>
-    <h1>Skills</h1>
-    <p>Designing clean experiences for the web! Building highly performant models! Deploying it all to the cloud!</p>
+    <div className="summary">
+      <h1>Skills</h1>
+      <ul>
+        <li>Designing clean experiences for the web!</li>
+        <li>Building highly performant models!</li>
+        <li>Deploying it all to the cloud!</li>
+      </ul>
+    </div>
 
     <div className="cards">
 
