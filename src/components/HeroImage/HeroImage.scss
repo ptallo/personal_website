@@ -23,7 +23,7 @@
     h1 {
         text-align: center;
         text-transform: uppercase;
-        width: 500px;
+        max-width: 500px;
     }
 
     span {
@@ -32,15 +32,16 @@
 
     ul {
         display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
+        flex-wrap: wrap;
         list-style-type: none;
+        justify-content: space-around;
 
         padding: 2em 0 2em 0;
 
         li {
+            text-align: center;
             margin: 0 1em 0 1em;
-            padding: 10px 2px;
+            padding: 10px 5px;
         }
 
         li::marker {
