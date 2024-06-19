@@ -1,18 +1,21 @@
 @import "../../index.scss";
 
 .keyword-bar {
-    width: 100%;
+    min-width: 500px;
+    padding: 0 50px;
     background-color: $background-color-2;
     padding: 1.7em 0;
 
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
 
     &>li {
         color: $text-color;
         font-size: 1.5em;
         padding: 0 0.25em;
+        margin: 0 20px;
     }
 
     &>li::marker {
