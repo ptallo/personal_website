@@ -1,51 +1,26 @@
 @import "../../index.scss";
 
 .skills {
-    padding: 50px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 50px 30px;
+    color: $text-color;
+}
 
-    & > * {
-        color: $text-color;
+.summary {
+    text-align: center;
+
+    .check {
+        color: $accent-color;
+        padding: 0 5px;
     }
 
-    & > p {
-        padding: 0 0 50px 0;
+    li {
+        list-style-type: none;
     }
 }
 
 .cards {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-around;
-}
-
-.card {
-    background-color: $background-color;
-    color: $text-color;
-    border: 5px solid $text-color;
-    width: 400px;
-    padding: 20px 50px;
-    margin: 20px;
-    border-radius: 10px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    justify-content: flex-start;
-
-    & > .icon {
-        font-size: 100px;
-    }
-
-    & > * {
-        padding: 0 0 10px 0;
-    }
-
-    & > h1 {
-        text-align: center;
-    }
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }

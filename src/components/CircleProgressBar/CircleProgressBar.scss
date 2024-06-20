@@ -1,0 +1,42 @@
+@import "../../index.scss";
+
+$circle-size: 130px;
+$bar-width: 20px;
+
+.circle-progress-bar {
+    margin: 20px 20px 0 20px;
+    display: relative;
+    width: $circle-size;
+
+    .icon {
+        font-size: calc($circle-size * 0.5);
+        position: absolute;
+    }
+
+    .circle {
+        --bar-progress: 0%;
+
+        display: grid;
+        place-items: center;
+
+        width: $circle-size;
+        aspect-ratio: 1 / 1;
+        background: conic-gradient($accent-color var(--bar-progress), #55595D 0%);
+        border-radius: 50%;
+
+        &::after {
+            content: '';
+            width: calc(100% - $bar-width);
+            aspect-ratio: 1 / 1;
+            background: $background-color;
+            border-radius: inherit;
+
+            display: grid;
+        }
+    }
+
+    p {
+        text-align: center;
+        margin: 10px 0 0 0;
+    }
+}

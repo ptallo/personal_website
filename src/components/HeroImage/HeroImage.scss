@@ -23,7 +23,8 @@
     h1 {
         text-align: center;
         text-transform: uppercase;
-        max-width: 500px;
+        max-width: 480px;
+        padding: 0 10px
     }
 
     span {
@@ -33,7 +34,6 @@
     ul {
         display: flex;
         flex-wrap: wrap;
-        list-style-type: none;
         justify-content: space-around;
 
         padding: 2em 0 2em 0;
@@ -54,7 +54,7 @@
 
 .image-container {
     margin: 0 auto 0 0;
-    
+
 
     img {
         height: 500px;
