@@ -26,7 +26,7 @@ export function SkillsSection() {
       <CircleProgressBar text="Generative AI" icon={faRobot} progress={70} />
       <CircleProgressBar text="Google Cloud Platform" icon={faGoogle} progress={60} />
       <CircleProgressBar text="Entity Framework" icon={faDatabase} progress={60} />
-      <CircleProgressBar text="Test Driven Development" icon={faFlaskVial} progress={60} />
+      <CircleProgressBar text="Test Driven Development" icon={faFlaskVial} progress={70} />
     </div>
 
   </div>;
