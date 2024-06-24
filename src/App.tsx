@@ -1,4 +1,5 @@
 import './App.scss'
+import { EmploymentHistory } from './components/EmploymentHistory/EmploymentHistory'
 import { HeroImage } from './components/HeroImage/HeroImage'
 import { KeywordBar } from './components/KeywordBar/KeywordBar'
 import { Navbar } from './components/Navbar/Navbar'
@@ -12,6 +13,7 @@ function App() {
       <HeroImage/>
       <KeywordBar/>
       <SkillsSection/>
+      <EmploymentHistory/>
     </div>
   )
 }
