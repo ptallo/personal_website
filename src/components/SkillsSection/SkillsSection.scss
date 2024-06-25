@@ -8,54 +8,27 @@
 .summary {
     text-align: center;
 
+    h1 {
+        font-size: 50px;
+    }
+
+    li {
+        font-size: 20px;
+        list-style-type: none;
+    }
+
     .check {
         color: $accent-color;
         padding: 0 5px;
     }
 
-    li {
-        list-style-type: none;
-    }
 }
 
 .cards {
+    max-width: 1000px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     margin: 50px auto;
-}
-
-
-@media screen and (min-width: 900px) {
-    .skills {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .skills h1 {
-        font-size: 70px;
-    }
-
-    .summary {
-        margin-left: 5%;
-        min-width: 400px;
-        text-align: right;
-    }
-
-    .cards {
-        margin: 0 5% 0 50px;
-        justify-content: start;
-    }
-    
-}
-
-@media screen and (min-width: 1600px) {
-    .summary {
-        margin-left: 15%;
-    }
-
-    .cards {
-        margin-right: 15%;
-    }
 }
