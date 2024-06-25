@@ -1,4 +1,5 @@
 import './App.scss'
+import { ContactMe } from './components/ContactMe/ContactMe'
 import { EmploymentHistory } from './components/EmploymentHistory/EmploymentHistory'
 import { HeroImage } from './components/HeroImage/HeroImage'
 import { KeywordBar } from './components/KeywordBar/KeywordBar'
@@ -9,11 +10,12 @@ function App() {
 
   return (
     <div>
-      <Navbar/>
-      <HeroImage/>
-      <KeywordBar/>
-      <SkillsSection/>
-      <EmploymentHistory/>
+      <Navbar />
+      <HeroImage />
+      <KeywordBar />
+      <SkillsSection />
+      <EmploymentHistory />
+      <ContactMe />
     </div>
   )
 }
