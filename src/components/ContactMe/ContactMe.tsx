@@ -35,6 +35,7 @@ export function ContactMe() {
         <input
           type="text"
           name="firstname"
+          placeholder='First Name...'
           value={inputs.firstname || ""}
           onChange={handleChange}
         />
@@ -42,6 +43,7 @@ export function ContactMe() {
         <input
           type="text"
           name="lastname"
+          placeholder='Last Name...'
           value={inputs.lastname || ""}
           onChange={handleChange}
         />
@@ -49,13 +51,15 @@ export function ContactMe() {
         <input
           type="email"
           name="email"
+          placeholder='Email...'
           value={inputs.email || ""}
           onChange={handleChange}
         />
 
-        <input
+        <textarea
           type="text"
           name="reason"
+          placeholder='Reason...'
           value={inputs.reason || ""}
           onChange={handleChange}
         />

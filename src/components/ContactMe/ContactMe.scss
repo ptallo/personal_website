@@ -17,8 +17,27 @@
         display: flex;
         flex-direction: column;
     
-        &>input {
-            margin: 20px;
+        &>input, &>textarea {
+            margin: 5px 20px;
+            padding: 10px;
+
+            font-family: 'Poppins';
+            color: $text-color;
+            background-color: $background-color;
+            border: 2px solid $accent-color;
+            border-radius: 5px;
+        }
+
+        &>::placeholder {
+            color: $text-color;
+        }
+
+        &>input[type=submit] {
+            width: 200px;
+        }
+
+        &>:nth-child(4) {
+            height: 200px;
         }
     }
 }
