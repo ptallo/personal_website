@@ -16,7 +16,7 @@ export function ContactMe() {
     'reason': '',
   });
 
-  const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
+  const handleChange = (event: React.FormEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
     const name = event.currentTarget.name;
     const value = event.currentTarget.value;
     setInputs((values: InputsInterface) => ({ ...values, [name]: value }))
@@ -24,7 +24,7 @@ export function ContactMe() {
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    alert(inputs);
+    alert(JSON.stringify(inputs));
   }
 
   return (
@@ -57,7 +57,6 @@ export function ContactMe() {
         />
 
         <textarea
-          type="text"
           name="reason"
           placeholder='Reason...'
           value={inputs.reason || ""}
