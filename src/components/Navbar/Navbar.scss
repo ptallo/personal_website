@@ -8,6 +8,10 @@
     display: flex;
     align-items: flex-end;
 
+    &>*{
+        cursor: pointer;
+    }
+
     .initials {
         padding: 0;
         font-weight: bold;
@@ -32,7 +36,7 @@
 }
 
 @media screen and (max-width: 600px) {
-    .navbar a:nth-child(-n+5){
+    .navbar .to-hide{
         display: none;
     }
 }
