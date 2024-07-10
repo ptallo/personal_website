@@ -26,11 +26,11 @@ export function ContactMe() {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     EmailService.sendContactForm().then(
-      (response) => {
+      (_) => {
         alert('Successfully sent email!');
         clearInputs();
       },
-      (error) => {
+      (_) => {
         alert('Failed to send email!');
       }
     );
