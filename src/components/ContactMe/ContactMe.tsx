@@ -33,8 +33,7 @@ export function ContactMe() {
       (error) => {
         alert('Failed to send email!');
       }
-    )
-
+    );
   }
 
   const clearInputs = () => {
@@ -57,6 +56,7 @@ export function ContactMe() {
           placeholder='First Name...'
           value={inputs.firstname || ""}
           onChange={handleChange}
+          required
         />
 
         <input
@@ -65,6 +65,7 @@ export function ContactMe() {
           placeholder='Last Name...'
           value={inputs.lastname || ""}
           onChange={handleChange}
+          required
         />
 
         <input
@@ -73,6 +74,7 @@ export function ContactMe() {
           placeholder='Email...'
           value={inputs.email || ""}
           onChange={handleChange}
+          required
         />
 
         <textarea
@@ -80,6 +82,7 @@ export function ContactMe() {
           placeholder='Reason...'
           value={inputs.reason || ""}
           onChange={handleChange}
+          required
         />
 
         <input type="submit" />
