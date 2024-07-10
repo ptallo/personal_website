@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './ContactMe.scss';
+import EmailService from "../../services/EmailService";
 
 interface InputsInterface {
   firstname: string;
@@ -24,13 +25,31 @@ export function ContactMe() {
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    alert(JSON.stringify(inputs));
+    EmailService.sendContactForm().then(
+      (response) => {
+        alert('Successfully sent email!');
+        clearInputs();
+      },
+      (error) => {
+        alert('Failed to send email!');
+      }
+    )
+
+  }
+
+  const clearInputs = () => {
+    setInputs({
+      'firstname': '',
+      'lastname': '',
+      'email': '',
+      'reason': '',
+    });
   }
 
   return (
     <div className='contact-me'>
       <h1>Contact Me</h1>
-      <form onSubmit={handleSubmit}>
+      <form id='contact-me-form' onSubmit={handleSubmit}>
 
         <input
           type="text"
@@ -47,7 +66,7 @@ export function ContactMe() {
           value={inputs.lastname || ""}
           onChange={handleChange}
         />
-        
+
         <input
           type="email"
           name="email"
