@@ -97,8 +97,8 @@ jobs:
       - name: Build and Push Container
         run: |-
           docker build \
-            --build-arg VITE_ALLOWED_HOSTS="${{ env.VITE_ALLOWED_HOSTS }}" \
-            --build-arg VITE_SERVER_ORIGIN="${{ env.VITE_SERVER_ORIGIN }}" \
+            -e VITE_ALLOWED_HOSTS="${{ env.VITE_ALLOWED_HOSTS }}" \
+            -e VITE_SERVER_ORIGIN="${{ env.VITE_SERVER_ORIGIN }}" \
             -t "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.SERVICE }}/${{ github.sha }}" ./
           docker push "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.SERVICE }}/${{ github.sha }}"
 
