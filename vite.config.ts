@@ -1,18 +1,22 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
+const defaultPort = 8080;
+const allowedHosts = (process.env.VITE_ALLOWED_HOSTS || 'localhost').split(',').map(h => h.trim())
+
 export default defineConfig({
   base: "/",
   plugins: [react()],
   preview: {
-    port: 8080,
+    port: process.env.VITE_PORT ? parseInt(process.env.VITE_PORT) : defaultPort,
     strictPort: true,
+    allowedHosts: allowedHosts,
   },
   server: {
-    port: 8080,
+    port: process.env.VITE_PORT ? parseInt(process.env.VITE_PORT) : defaultPort,
     strictPort: true,
     host: true,
-    origin: "http://0.0.0.0:8080",
+    origin: process.env.VITE_SERVER_ORIGIN || "http://localhost:8080",
+    allowedHosts: allowedHosts,
   },
 });

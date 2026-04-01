@@ -53,6 +53,8 @@ env:
   GAR_LOCATION: "us-central1" # TODO: update Artifact Registry location
   SERVICE: "personal-website" # TODO: update Cloud Run service name
   REGION: "us-central1" # TODO: update Cloud Run service region
+  VITE_ALLOWED_HOSTS: "www.philip-tallo.com" 
+  VITE_SERVER_ORIGIN: "https://www.philip-tallo.com"
 
 jobs:
   deploy:
@@ -94,7 +96,10 @@ jobs:
 
       - name: Build and Push Container
         run: |-
-          docker build -t "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.SERVICE }}/${{ github.sha }}" ./
+          docker build \
+            --build-arg VITE_ALLOWED_HOSTS="${{ env.VITE_ALLOWED_HOSTS }}" \
+            --build-arg VITE_SERVER_ORIGIN="${{ env.VITE_SERVER_ORIGIN }}" \
+            -t "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.SERVICE }}/${{ github.sha }}" ./
           docker push "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.SERVICE }}/${{ github.sha }}"
 
       # END - Docker auth and build

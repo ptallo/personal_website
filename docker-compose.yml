@@ -7,5 +7,9 @@ services:
         - .:/app
         - /app/node_modules
         - /app/dist
+    environment:
+      - VITE_ALLOWED_HOSTS=localhost
+      - VITE_SERVER_ORIGIN=http://localhost:4321
+      - VITE_PORT=4321
     ports:
-      - "8080:8080"
+      - "4321:4321"
