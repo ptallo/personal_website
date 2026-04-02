@@ -53,8 +53,7 @@ env:
   GAR_LOCATION: "us-central1" # TODO: update Artifact Registry location
   SERVICE: "personal-website" # TODO: update Cloud Run service name
   REGION: "us-central1" # TODO: update Cloud Run service region
-  VITE_ALLOWED_HOSTS: "www.philip-tallo.com" 
-  VITE_SERVER_ORIGIN: "https://www.philip-tallo.com"
+  VITE_ALLOWED_HOSTS: '["www.philip-tallo.com", "philip-tallo.com"]' 
 
 jobs:
   deploy:
