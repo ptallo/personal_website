@@ -4,6 +4,9 @@ import react from '@vitejs/plugin-react'
 const defaultPort = 8080;
 const allowedHosts = process.env.VITE_ALLOWED_HOSTS ? JSON.parse(process.env.VITE_ALLOWED_HOSTS) : ['localhost'];
 
+console.log(process.env.VITE_ALLOWED_HOSTS);
+console.log(allowedHosts);
+
 export default defineConfig({
   base: "/",
   plugins: [react()],
